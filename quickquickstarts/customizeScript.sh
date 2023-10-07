@@ -2,9 +2,10 @@
 
 # Add preview banner to MOTD
 cat >> /etc/motd << EOF
-*******************************************************
+**************************************************************************
 **            This VM was built from the:            **
 **      !! AZURE VM IMAGE BUILDER Custom Image !!    **
-**         You have just been Customized :-)         **
-*******************************************************
+**         The VM has Just been customized for Larus Technologies ! **
+**              By Nelson Nwajie 7th-Oct-2023    :-)    **
+***************************************************************************
 EOF
