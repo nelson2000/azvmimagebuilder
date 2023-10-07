@@ -29,7 +29,7 @@
             "type": "PlatformImage",
                 "publisher": "Canonical",
                 "offer": "UbuntuServer",
-                "sku": "18.04-LTS",
+                "sku": "22.04-LTS",
                 "version": "latest"
             
         },
@@ -37,32 +37,15 @@
             {
                 "type": "Shell",
                 "name": "RunScriptFromSource",
-                "scriptUri": "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/quickquickstarts/customizeScript.sh"
+                "scriptUri": "https://github.com/nelson2000/azvmimagebuilder/blob/main/quickquickstarts/customizeScript.sh"
             },
 
             {
                 "type": "Shell",
                 "name": "CheckSumCompareShellScript",
-                "scriptUri": "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/quickquickstarts/customizeScript2.sh",
-                "sha256Checksum": "ade4c5214c3c675e92c66e2d067a870c5b81b9844b3de3cc72c49ff36425fc93"
+                "scriptUri": "https://github.com/nelson2000/azvmimagebuilder/blob/main/quickquickstarts/customizeScript2.sh",
             },
         
-            
-            {
-                "type": "File",
-                "name": "downloadBuildArtifacts",
-                "sourceUri": "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/quickquickstarts/exampleArtifacts/buildArtifacts/index.html",
-                "destination":"/tmp/index.html"
-            },
-
-            {
-                "type": "Shell",
-                "name": "setupBuildPath",
-                "inline": [
-                    "sudo mkdir /buildArtifacts",
-                    "sudo cp /tmp/index.html /buildArtifacts/index.html"
-                ]
-            },
 
             {
                 "type": "Shell",
@@ -80,7 +63,7 @@
                 "runOutputName": "<runOutputName>",
                 "artifactTags": {
                     "source": "azureVmImageBuilder",
-                    "baseosimg": "ubuntu1804"
+                    "baseosimg": "ubuntu2204"
                 },
                 "replicationRegions": [
                   "<region1>",
