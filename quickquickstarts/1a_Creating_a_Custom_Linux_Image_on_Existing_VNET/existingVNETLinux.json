@@ -69,7 +69,7 @@
                     "runOutputName": "<runOutputName>",
                     "artifactTags": {
                         "source": "azVmImageBuilder",
-                        "baseosimg": "ubuntu1804"
+                        "baseosimg": "ubuntu2204"
                     }
                 }
             ]
