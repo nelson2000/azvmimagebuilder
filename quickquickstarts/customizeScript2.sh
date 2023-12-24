@@ -2,7 +2,7 @@
 
 sudo su -
 
-USER1=mlopsserver
+USER1=larusadmin
 sudo useradd -m $USER1
 sudo usermod -aG sudo $USER1
 
