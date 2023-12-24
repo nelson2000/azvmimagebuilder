@@ -60,8 +60,8 @@ export PATH=$PATH:/usr/local/go/bin
 #pip and venv
 
 sudo apt update -y
-yes | sudo apt install python3-pip
-yes | sudo apt install -y python3-venv
+sudo apt install python3-pip -y
+sudo apt install -y python3-venv
 
 # java 11
 sudo apt update -y
@@ -73,7 +73,7 @@ export PATH="$PATH:/home/mlopsserver/istio-1.20.1/bin"
 
 # mysql client
 sudo apt update -y
-sudo apt install mysql-server
+sudo apt install mysql-server -y
 
 #jenkins
 wget -P ~/jenkins/ https://get.jenkins.io/war-stable/2.426.2/jenkins.war
