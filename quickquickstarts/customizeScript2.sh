@@ -1,11 +1,24 @@
 #!/bin/bash -e
 
-sudo su -
+
 
 USER1=larusadmin
 sudo useradd -m $USER1
 sudo usermod -aG sudo $USER1
 
+USER2=mlopsserver
+sudo useradd -m $USER2
+sudo usermod -aG sudo $USER2
+
+USER3=cloudadmin
+sudo useradd -m $USER3
+# sudo usermod -aG sudo $USER3
+
+USER4=kfuser
+sudo useradd -m $USER4
+# sudo usermod -aG sudo $USER4
+
+sudo su - $USER1
 
 sudo apt-get update -y
 sudo apt-get install ca-certificates curl apt-transport-https lsb-release gnupg -y
@@ -91,8 +104,11 @@ yes | sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linu
 sudo apt-key fingerprint 0EBFCD88
 sudo apt-get update -y
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
-sudo usermod -aG docker $USER 
+sudo usermod -aG docker $USER1 
+sudo usermod -aG docker $USER2
+sudo usermod -aG docker $USER3
+sudo usermod -aG docker $USER4
 sudo chmod 777 /var/run/docker.sock
-sudo chown -R $USER /var/run/docker.sock
-sudo su - $USER
+sudo chown -R $USER1 /var/run/docker.sock
+sudo su - $USER1
 
